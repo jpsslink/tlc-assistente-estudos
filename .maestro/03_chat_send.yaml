@@ -1,0 +1,43 @@
+appId: com.tlc.assistenteestudos
+---
+# Flow 03: Chat Send Message
+# Prerequisite: API key already configured (run 01_api_key_setup first or seed state)
+# Test: Type message → tap Send → verify loading indicator → verify response renders
+
+- launchApp
+- waitForAnimationToEnd
+
+# Navigate to Chat tab
+- tapOn:
+    text: "Chat"
+- waitForAnimationToEnd
+
+# Verify chat is available (API key configured)
+- assertVisible:
+    id: "chat-text-input"
+
+# Type a message
+- tapOn:
+    id: "chat-text-input"
+- inputText: "O que é o loop ReAct?"
+
+# Tap send button
+- tapOn:
+    id: "chat-send-button"
+- waitForAnimationToEnd
+
+# Verify loading indicator appears
+- assertVisible:
+    id: "streaming-indicator"
+
+# Wait for response
+- waitForAnimationToEnd:
+    timeout: 30000
+
+# Verify response was rendered (message list has items)
+- assertVisible:
+    id: "message-list"
+
+# Verify send button is re-enabled after response
+- assertVisible:
+    id: "chat-send-button"

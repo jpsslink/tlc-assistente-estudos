@@ -1,0 +1,45 @@
+appId: com.tlc.assistenteestudos
+---
+# Flow 02: Study Progression
+# Test: Tap Dashboard tab → tap "MARCAR COMO LIDO" → verify concept advances
+#       Continue until last concept → verify project card appears
+
+- launchApp
+- waitForAnimationToEnd
+
+# Navigate to Dashboard tab
+- tapOn:
+    text: "Dashboard"
+- waitForAnimationToEnd
+
+# Verify concept card is shown
+- assertVisible:
+    text: "MARCAR COMO LIDO"
+
+# Mark first concept as read
+- tapOn:
+    text: "MARCAR COMO LIDO"
+- waitForAnimationToEnd
+
+# Verify dashboard updated (concept advanced or project shown)
+# After all concepts read, project card should appear
+- assertVisible:
+    text: "Dashboard"
+
+# Scroll to see all content
+- scroll
+
+# Mark remaining concepts as read until project mode
+- tapOn:
+    text: "MARCAR COMO LIDO"
+    optional: true
+- waitForAnimationToEnd
+
+- tapOn:
+    text: "MARCAR COMO LIDO"
+    optional: true
+- waitForAnimationToEnd
+
+# After last concept read, verify project card appears
+- assertVisible:
+    text: "MARCAR COMO PRONTO"

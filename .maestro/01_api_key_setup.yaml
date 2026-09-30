@@ -1,0 +1,32 @@
+appId: com.tlc.assistenteestudos
+---
+# Flow 01: API Key Setup
+# Test: Launch app → tap Chat tab → enter API key → verify chat input enabled
+
+- launchApp
+- waitForAnimationToEnd
+
+# Navigate to Chat tab
+- tapOn:
+    text: "Chat"
+- waitForAnimationToEnd
+
+# Verify no-key message shown
+- assertVisible:
+    text: "Configure sua API key para usar o chat"
+
+# Enter a valid API key
+- tapOn:
+    id: "api-key-input"
+- inputText: "sk-ant-testkey1234abcdexample"
+
+# Save the key
+- tapOn:
+    text: "Salvar"
+- waitForAnimationToEnd
+
+# Verify chat input is now enabled
+- assertVisible:
+    id: "chat-text-input"
+- assertNotVisible:
+    text: "Configure sua API key para usar o chat"

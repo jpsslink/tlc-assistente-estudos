@@ -724,15 +724,15 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] No API key: shows `ApiKeyConfig` + "Configure sua API key para usar o chat" (ESTD-43); `QuickActions` hidden (ESTD-40)
-- [ ] API key configured: shows `MessageList` + `QuickActions` + `ChatInput` (ESTD-41)
-- [ ] `chatError` displayed inline as non-destructive error row, does not clear history (ESTD-29 to ESTD-32)
-- [ ] Tab navigation preserves chat state (ESTD-54)
-- [ ] `.maestro/01_api_key_setup.yaml`: launch → Chat tab → enter key → verify chat enabled
-- [ ] `.maestro/02_study_progression.yaml`: Dashboard → "MARCAR COMO LIDO" → concept advances; last concept → project card appears
-- [ ] `.maestro/03_chat_send.yaml`: type message → send → loading indicator → response renders
-- [ ] Test file: `app/(tabs)/__tests__/chat.test.tsx`
-- [ ] `npx tsc --noEmit` exits 0, `npm test -- --watchAll=false` exits 0 (≥ 8 unit tests), `maestro test .maestro/` passes
+- [x] No API key: shows `ApiKeyConfig` + "Configure sua API key para usar o chat" (ESTD-43); `QuickActions` hidden (ESTD-40)
+- [x] API key configured: shows `MessageList` + `QuickActions` + `ChatInput` (ESTD-41)
+- [x] `chatError` displayed inline as non-destructive error row, does not clear history (ESTD-29 to ESTD-32)
+- [x] Tab navigation preserves chat state (ESTD-54)
+- [x] `.maestro/01_api_key_setup.yaml`: launch → Chat tab → enter key → verify chat enabled
+- [x] `.maestro/02_study_progression.yaml`: Dashboard → "MARCAR COMO LIDO" → concept advances; last concept → project card appears
+- [x] `.maestro/03_chat_send.yaml`: type message → send → loading indicator → response renders
+- [x] Test file: `app/(tabs)/__tests__/chat.test.tsx`
+- [x] `npx tsc --noEmit` exits 0, `npm test -- --watchAll=false` exits 0 (≥ 8 unit tests), `maestro test .maestro/` passes
 
 **Tests**: unit + e2e
 **Gate**: full
