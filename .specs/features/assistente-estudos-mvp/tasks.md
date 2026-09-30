@@ -488,14 +488,14 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Card renders "MOSTRAR MATERIAL", "MARCAR COMO LIDO", "AJUDA COM ESTE CONCEITO" buttons
-- [ ] Tapping "MOSTRAR MATERIAL" opens full-screen modal with all 5 sections (ESTD-07)
-- [ ] Modal shows estimated reading time (ESTD-08)
-- [ ] Close button dismisses modal (ESTD-09)
-- [ ] Content rendered as plain text — no Markdown (ESTD-10)
-- [ ] "AJUDA COM ESTE CONCEITO" calls `onAskClaude` prop (ESTD-39)
-- [ ] Test file: `components/Dashboard/__tests__/ConceptCard.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 8 tests pass
+- [x] Card renders "MOSTRAR MATERIAL", "MARCAR COMO LIDO", "AJUDA COM ESTE CONCEITO" buttons
+- [x] Tapping "MOSTRAR MATERIAL" opens full-screen modal with all 5 sections (ESTD-07)
+- [x] Modal shows estimated reading time (ESTD-08)
+- [x] Close button dismisses modal (ESTD-09)
+- [x] Content rendered as plain text — no Markdown (ESTD-10)
+- [x] "AJUDA COM ESTE CONCEITO" calls `onAskClaude` prop (ESTD-39)
+- [x] Test file: `components/Dashboard/__tests__/ConceptCard.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 8 tests pass
 
 **Tests**: unit
 **Gate**: quick
