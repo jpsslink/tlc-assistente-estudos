@@ -439,11 +439,11 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Renders "Semana N/14 | [Phase Name] | Conceito X de Y" when `mode = "concept"` (ESTD-05)
-- [ ] Renders "Semana N/14 | [Phase Name] | Projeto X de Y" when `mode = "project"` (ESTD-06)
-- [ ] Independent test: Week 4 / Phase 1 / Concept 2 of 3 → "Semana 4/14 | FASE 1 — Ferramentas e Memória | Conceito 2 de 3" (ESTD-01)
-- [ ] Test file: `components/Dashboard/__tests__/PhaseHeader.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 6 tests pass
+- [x] Renders "Semana N/14 | [Phase Name] | Conceito X de Y" when `mode = "concept"` (ESTD-05)
+- [x] Renders "Semana N/14 | [Phase Name] | Projeto X de Y" when `mode = "project"` (ESTD-06)
+- [x] Independent test: Week 4 / Phase 1 / Concept 2 of 3 → "Semana 4/14 | FASE 1 — Ferramentas e Memória | Conceito 2 de 3" (ESTD-01)
+- [x] Test file: `components/Dashboard/__tests__/PhaseHeader.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 6 tests pass
 
 **Tests**: unit
 **Gate**: quick
