@@ -1,6 +1,8 @@
 import { act, renderHook } from '@testing-library/react-native';
+import { MMKV } from 'react-native-mmkv';
 import { useStudyState } from '../useStudyState';
 import { CURRICULUM } from '../../data/curriculum';
+import { MMKV_KEY } from '../../utils/storage';
 
 // Reset the Zustand store before each test
 beforeEach(() => {
@@ -347,5 +349,72 @@ describe('curriculum structure validation', () => {
   it('Total projects across all phases is 9', () => {
     const total = CURRICULUM.reduce((sum, phase) => sum + phase.projects.length, 0);
     expect(total).toBe(9);
+  });
+});
+
+describe('Hydration from MMKV persist (ESTD-47)', () => {
+  beforeEach(() => {
+    // Clear shared MMKV mock storage so each test starts clean
+    const mmkv = new MMKV();
+    mmkv.clearAll();
+  });
+
+  it('restores all 8 persisted state fields from MMKV on rehydrate (ESTD-47)', async () => {
+    const mmkv = new MMKV();
+    const savedState = {
+      currentPhaseId: CURRICULUM[1].id,
+      currentConceptIndex: 0,
+      currentProjectIndex: 0,
+      mode: 'concept' as const,
+      startDate: 1000000,
+      completedConcepts: ['concept-1-1'],
+      completedProjects: ['project-1-1'],
+      projectStepStates: { 'project-1-1': { 0: true } },
+      projectCriteriaStates: { 'project-1-1': { 0: true } },
+    };
+    // Zustand createJSONStorage wraps state as { state: {...}, version: 0 }
+    mmkv.set(MMKV_KEY, JSON.stringify({ state: savedState, version: 0 }));
+
+    await act(async () => {
+      await (useStudyState as any).persist.rehydrate();
+    });
+
+    const state = getState();
+    expect(state.currentPhaseId).toBe(CURRICULUM[1].id);
+    expect(state.currentConceptIndex).toBe(0);
+    expect(state.currentProjectIndex).toBe(0);
+    expect(state.mode).toBe('concept');
+    expect(state.startDate).toBe(1000000);
+    expect(state.completedConcepts).toEqual(['concept-1-1']);
+    expect(state.completedProjects).toEqual(['project-1-1']);
+    expect(state.projectStepStates).toEqual({ 'project-1-1': { 0: true } });
+    expect(state.projectCriteriaStates).toEqual({ 'project-1-1': { 0: true } });
+  });
+
+  it('resets out-of-bounds currentConceptIndex to 0 with console.warn on rehydrate (ESTD-50)', async () => {
+    const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    const mmkv = new MMKV();
+    const phase0 = CURRICULUM[0];
+    const badState = {
+      currentPhaseId: phase0.id,
+      currentConceptIndex: phase0.concepts.length + 5,
+      currentProjectIndex: 0,
+      mode: 'concept' as const,
+      startDate: Date.now(),
+      completedConcepts: [],
+      completedProjects: [],
+      projectStepStates: {},
+      projectCriteriaStates: {},
+    };
+    mmkv.set(MMKV_KEY, JSON.stringify({ state: badState, version: 0 }));
+
+    await act(async () => {
+      await (useStudyState as any).persist.rehydrate();
+    });
+
+    const state = getState();
+    expect(state.currentConceptIndex).toBe(0);
+    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('out of bounds'));
+    warnSpy.mockRestore();
   });
 });
