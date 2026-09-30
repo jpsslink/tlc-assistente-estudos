@@ -647,11 +647,11 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Renders `FlatList` of `MessageBubble` components
-- [ ] `scrollToEnd()` called via `ref` when `messages` array grows (ESTD-28)
-- [ ] Empty state renders without crash
-- [ ] Test file: `components/Chat/__tests__/MessageList.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 4 tests pass
+- [x] Renders `FlatList` of `MessageBubble` components
+- [x] `scrollToEnd()` called via `ref` when `messages` array grows (ESTD-28)
+- [x] Empty state renders without crash
+- [x] Test file: `components/Chat/__tests__/MessageList.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 4 tests pass
 
 **Tests**: unit
 **Gate**: quick
