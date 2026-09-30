@@ -464,10 +464,10 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Renders phase progress as "X/Y — ZZ%" label + filled bar (ESTD-03)
-- [ ] Renders overall progress as "X/9 projetos" label + filled bar (ESTD-04)
-- [ ] Test file: `components/Dashboard/__tests__/ProgressBar.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 5 tests pass
+- [x] Renders phase progress as "X/Y — ZZ%" label + filled bar (ESTD-03)
+- [x] Renders overall progress as "X/9 projetos" label + filled bar (ESTD-04)
+- [x] Test file: `components/Dashboard/__tests__/ProgressBar.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 5 tests pass
 
 **Tests**: unit
 **Gate**: quick
