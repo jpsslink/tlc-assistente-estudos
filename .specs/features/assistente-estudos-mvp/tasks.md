@@ -414,11 +414,11 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Renders label text and checkbox indicator (checked/unchecked)
-- [ ] `onToggle(checked: boolean)` called on press
-- [ ] Disabled state renders without crash, no callback fired
-- [ ] Test file: `components/shared/__tests__/ChecklistItem.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 4 tests pass
+- [x] Renders label text and checkbox indicator (checked/unchecked)
+- [x] `onToggle(checked: boolean)` called on press
+- [x] Disabled state renders without crash, no callback fired
+- [x] Test file: `components/shared/__tests__/ChecklistItem.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 4 tests pass
 
 **Tests**: unit
 **Gate**: quick
