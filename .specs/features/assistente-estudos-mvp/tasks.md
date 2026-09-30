@@ -312,10 +312,10 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] `buildPrompt(state: StudyState): string` returns string containing: current week, phase name + objective, concept title, `whyItMatters`, `whatToLearn`, `howToLearn`, `resources`, project title, steps, readiness criteria (ESTD-25)
-- [ ] Returns valid string for both `mode = "concept"` and `mode = "project"`
-- [ ] Test file: `utils/__tests__/systemPrompt.test.ts`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 8 tests pass
+- [x] `buildPrompt(state: StudyState): string` returns string containing: current week, phase name + objective, concept title, `whyItMatters`, `whatToLearn`, `howToLearn`, `resources`, project title, steps, readiness criteria (ESTD-25)
+- [x] Returns valid string for both `mode = "concept"` and `mode = "project"`
+- [x] Test file: `utils/__tests__/systemPrompt.test.ts`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 8 tests pass (15 pass)
 
 **Tests**: unit
 **Gate**: quick
