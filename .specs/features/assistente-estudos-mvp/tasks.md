@@ -283,15 +283,15 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Store initializes with defaults when MMKV empty: Phase 0, conceptIndex 0, projectIndex 0, mode "concept", `startDate = Date.now()`, empty arrays/maps, `pendingChatInput = ""` (ESTD-49)
-- [ ] `partialize` excludes `pendingChatInput` from MMKV (AD-014)
-- [ ] `markConceptRead`: advances `currentConceptIndex`; sets `mode = "project"` when last concept done (ESTD-11, ESTD-12)
-- [ ] `markProjectDone`: advances phase or next project in Phase 1; returns `{ needsConfirm: true }` when criteria unchecked (ESTD-20 to ESTD-24)
-- [ ] `currentWeek()` caps at 14 (ESTD-01 edge case)
-- [ ] Hydration resets out-of-bounds `currentConceptIndex` to 0 with `console.warn` (ESTD-50 edge case)
-- [ ] State writes to MMKV before returning (ESTD-47, ESTD-52)
-- [ ] Test file: `hooks/__tests__/useStudyState.test.ts`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 20 tests pass
+- [x] Store initializes with defaults when MMKV empty: Phase 0, conceptIndex 0, projectIndex 0, mode "concept", `startDate = Date.now()`, empty arrays/maps, `pendingChatInput = ""` (ESTD-49)
+- [x] `partialize` excludes `pendingChatInput` from MMKV (AD-014)
+- [x] `markConceptRead`: advances `currentConceptIndex`; sets `mode = "project"` when last concept done (ESTD-11, ESTD-12)
+- [x] `markProjectDone`: advances phase or next project in Phase 1; returns `{ needsConfirm: true }` when criteria unchecked (ESTD-20 to ESTD-24)
+- [x] `currentWeek()` caps at 14 (ESTD-01 edge case)
+- [x] Hydration resets out-of-bounds `currentConceptIndex` to 0 with `console.warn` (ESTD-50 edge case)
+- [x] State writes to MMKV before returning (ESTD-47, ESTD-52)
+- [x] Test file: `hooks/__tests__/useStudyState.test.ts`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 20 tests pass (34 pass)
 
 **Tests**: unit
 **Gate**: quick
