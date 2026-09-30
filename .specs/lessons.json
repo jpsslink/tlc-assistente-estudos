@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "promote_threshold": 2,
+  "window_days": 45,
+  "quarantine_threshold": 2,
+  "next_id": 3,
+  "lessons": [
+    {
+      "id": "L-001",
+      "key": "ac_gap::zustand persist middleware hydration onrehydratestorage is never exercised by tests that use setstate directly to reset state in beforeeach add a hydration smoke test mock mmkv to return a known serialized state then call rehydration and assert each field is restored",
+      "text": "Zustand persist middleware hydration (onRehydrateStorage) is never exercised by tests that use setState() directly to reset state in beforeEach. Add a hydration smoke test: mock MMKV to return a known serialized state, then call rehydration and assert each field is restored.",
+      "signal": "ac_gap",
+      "scope": "",
+      "status": "candidate",
+      "features": [
+        "assistente-estudos-mvp"
+      ],
+      "recurrence": 1,
+      "harmful": 0,
+      "evidence": [
+        "ESTD-47"
+      ],
+      "created": "2026-09-30T01:55:41Z",
+      "last_seen": "2026-09-30T01:55:41Z"
+    },
+    {
+      "id": "L-002",
+      "key": "ac_gap::json parse error recovery in storage ts readstudystate is implemented but untested the zustand rehydrate callback delegates to the persist middleware default which calls readstudystate but no test passes invalid json to the mmkv mock add a test that mocks mmkv getstring to return malformed json and verifies the store initializes with defaults and emits console warn",
+      "text": "JSON parse error recovery in storage.ts (readStudyState) is implemented but untested. The Zustand rehydrate callback delegates to the persist middleware default, which calls readStudyState() — but no test passes invalid JSON to the MMKV mock. Add a test that mocks MMKV.getString to return malformed JSON and verifies the store initializes with defaults and emits console.warn.",
+      "signal": "ac_gap",
+      "scope": "",
+      "status": "candidate",
+      "features": [
+        "assistente-estudos-mvp"
+      ],
+      "recurrence": 1,
+      "harmful": 0,
+      "evidence": [
+        "ESTD-50"
+      ],
+      "created": "2026-09-30T01:55:48Z",
+      "last_seen": "2026-09-30T01:55:48Z"
+    }
+  ]
+}
