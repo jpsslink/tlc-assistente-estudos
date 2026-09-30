@@ -596,12 +596,12 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Saving valid key (`sk-ant-…`) calls `writeApiKey` and calls `onSaved()` (ESTD-41)
-- [ ] Saving invalid key shows inline error, does not call `writeApiKey` (ESTD-42)
-- [ ] When key configured, displays "••••abcd" (last 4 chars) (ESTD-44)
-- [ ] Full key never rendered in any text element (ESTD-45)
-- [ ] Test file: `components/shared/__tests__/ApiKeyConfig.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 8 tests pass
+- [x] Saving valid key (`sk-ant-…`) calls `writeApiKey` and calls `onSaved()` (ESTD-41)
+- [x] Saving invalid key shows inline error, does not call `writeApiKey` (ESTD-42)
+- [x] When key configured, displays "••••abcd" (last 4 chars) (ESTD-44)
+- [x] Full key never rendered in any text element (ESTD-45)
+- [x] Test file: `components/shared/__tests__/ApiKeyConfig.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 8 tests pass
 
 **Tests**: unit
 **Gate**: quick
