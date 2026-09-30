@@ -672,12 +672,12 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Send button disabled when `isLoading = true` or input empty (ESTD-26)
-- [ ] Empty input send attempt does nothing (edge case)
-- [ ] `useIsFocused()` effect reads `pendingChatInput` on tab focus, sets local input, calls `clearPendingChatInput()` (AD-014)
-- [ ] `onSend(text)` called with trimmed input; input clears after send
-- [ ] Test file: `components/Chat/__tests__/ChatInput.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 6 tests pass
+- [x] Send button disabled when `isLoading = true` or input empty (ESTD-26)
+- [x] Empty input send attempt does nothing (edge case)
+- [x] `useIsFocused()` effect reads `pendingChatInput` on tab focus, sets local input, calls `clearPendingChatInput()` (AD-014)
+- [x] `onSend(text)` called with trimmed input; input clears after send
+- [x] Test file: `components/Chat/__tests__/ChatInput.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 6 tests pass
 
 **Tests**: unit
 **Gate**: quick
