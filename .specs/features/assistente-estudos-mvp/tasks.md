@@ -390,10 +390,10 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] `app/_layout.tsx` wraps with `<Stack>`
-- [ ] `app/(tabs)/_layout.tsx` renders `<Tabs>` with two tabs: "Dashboard" (home icon) and "Chat" (chat bubble icon) (ESTD-53)
-- [ ] Tab bar background `#f5f5f7`, active tint `#0066cc` (DESIGN.md)
-- [ ] `npx tsc --noEmit` exits 0
+- [x] `app/_layout.tsx` wraps with `<Stack>`
+- [x] `app/(tabs)/_layout.tsx` renders `<Tabs>` with two tabs: "Dashboard" (home icon) and "Chat" (chat bubble icon) (ESTD-53)
+- [x] Tab bar background `#f5f5f7`, active tint `#0066cc` (DESIGN.md)
+- [x] `npx tsc --noEmit` exits 0
 
 **Tests**: none
 **Gate**: build
