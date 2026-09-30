@@ -622,11 +622,11 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] User messages rendered as `<Text>` with user-bubble styling
-- [ ] Assistant messages rendered via `react-native-markdown-display` with custom style for code blocks (ESTD-34)
-- [ ] `isStreaming = true` shows loading indicator (ESTD-26)
-- [ ] Test file: `components/Chat/__tests__/MessageBubble.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 5 tests pass
+- [x] User messages rendered as `<Text>` with user-bubble styling
+- [x] Assistant messages rendered via `react-native-markdown-display` with custom style for code blocks (ESTD-34)
+- [x] `isStreaming = true` shows loading indicator (ESTD-26)
+- [x] Test file: `components/Chat/__tests__/MessageBubble.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 5 tests pass
 
 **Tests**: unit
 **Gate**: quick
