@@ -117,10 +117,10 @@
 ## Handoff
 
 - **Feature**: assistente-estudos-mvp
-- **Phase / Task**: ✅ FEATURE COMPLETA — todos os gaps fechados, validate_state.py exit 0.
-- **Completed**: 24 tasks + 2 fix tests (ESTD-47, ESTD-50). 186 testes passando, 0 falhas, 19 suites. Commits: c8bb252..8abb412 (16 commits).
+- **Phase / Task**: ✅ FEATURE COMPLETA — unit tests passando, Maestro e2e pendente de execução.
+- **Completed**: 24 tasks + 2 fix tests (ESTD-47, ESTD-50). 186 testes Jest passando, 0 falhas, 19 suites. Commits: c8bb252..e633891 (19 commits).
 - **In-progress**: none
-- **Next step**: Pronto para ship. Próximo: EAS Build para gerar binários iOS/Android (AD-013), ou início de nova feature.
-- **Blockers**: none
-- **Uncommitted files**: .specs/STATE.md (este update)
-- **Branch**: main
+- **Next step**: Executar Maestro e2e no MacBook: `npx expo run:ios && maestro test .maestro/` (3 flows: api_key_setup, study_progression, chat_send). Repo publicado em https://github.com/jpsslink/tlc-assistente-estudos.
+- **Blockers**: Maestro e2e requer simulador iOS/Android — disponível no MacBook.
+- **Uncommitted files**: none
+- **Branch**: main (origin: github.com/jpsslink/tlc-assistente-estudos)

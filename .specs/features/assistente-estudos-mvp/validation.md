@@ -151,21 +151,25 @@ All 24 tasks marked complete with all Done When criteria satisfied.
 
 ## Gate Check
 
-- **Gate command**: `npx tsc --noEmit && npm test -- --watchAll=false`
+- **Gate command (unit)**: `npx tsc --noEmit && npm test -- --watchAll=false`
 - **Result**: 186 passed, 0 failed
 - **Test count**: 186 tests across 19 suites
 - **TypeScript**: clean exit (no errors)
 - **Delta**: +186 tests (from 0, greenfield project)
 
+- **Gate command (e2e — T24 full gate)**: `maestro test .maestro/`
+- **Result**: ⚠️ NOT EXECUTED — Windows environment had no iOS/Android simulator available during implementation. The 3 Maestro flow files exist and are syntactically correct but have not been run against a real app. Execution required on MacBook with `npx expo run:ios` + `maestro test .maestro/`.
+
 ---
 
 ## Summary
 
-**Overall**: ✅ PASS
+**Overall**: ✅ PASS (unit + static) — ⚠️ Maestro e2e pending
 
 **Spec-anchored check**: 51/60 ACs matched spec outcome | 9 spec-precision gaps | 0 genuine gaps | 2 not-testable by design
 **Sensor**: 3/3 mutations killed (static analysis)
-**Gate**: 186 tests passed, 0 failed
+**Gate (unit)**: 186 tests passed, 0 failed
+**Gate (e2e)**: ⚠️ NOT EXECUTED — requires MacBook + iOS Simulator
 
 **What works**:
 - All 24 tasks marked complete with verified gate checks
@@ -175,3 +179,6 @@ All 24 tasks marked complete with all Done When criteria satisfied.
 - Chat error isolation (messages not cleared on error) is directly tested
 - Streaming progressive update is directly tested
 - MMKV hydration path (ESTD-47) and JSON parse error recovery (ESTD-50) now covered by targeted tests
+
+**Open item**:
+- Maestro e2e flows (`.maestro/01_api_key_setup.yaml`, `02_study_progression.yaml`, `03_chat_send.yaml`) were not executed. Run `npx expo run:ios && maestro test .maestro/` on MacBook to close this gap.
