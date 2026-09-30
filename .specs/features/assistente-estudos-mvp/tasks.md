@@ -516,14 +516,14 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Renders all project steps and readiness criteria via `ChecklistItem` (ESTD-15)
-- [ ] Status "Não iniciado" when no steps checked (ESTD-16)
-- [ ] Status "Em Progresso" when ≥1 step checked and ≥1 unchecked (ESTD-17)
-- [ ] Status "Aguardando Revisão" when all steps checked (ESTD-18)
-- [ ] "MARCAR COMO PRONTO" with all criteria → calls `onMarkDone()` (ESTD-20)
-- [ ] "MARCAR COMO PRONTO" with unchecked criteria → calls `onNeedsConfirm()` (ESTD-21)
-- [ ] Test file: `components/Dashboard/__tests__/ProjectCard.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 10 tests pass
+- [x] Renders all project steps and readiness criteria via `ChecklistItem` (ESTD-15)
+- [x] Status "Não iniciado" when no steps checked (ESTD-16)
+- [x] Status "Em Progresso" when ≥1 step checked and ≥1 unchecked (ESTD-17)
+- [x] Status "Aguardando Revisão" when all steps checked (ESTD-18)
+- [x] "MARCAR COMO PRONTO" with all criteria → calls `onMarkDone()` (ESTD-20)
+- [x] "MARCAR COMO PRONTO" with unchecked criteria → calls `onNeedsConfirm()` (ESTD-21)
+- [x] Test file: `components/Dashboard/__tests__/ProjectCard.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 10 tests pass
 
 **Tests**: unit
 **Gate**: quick
