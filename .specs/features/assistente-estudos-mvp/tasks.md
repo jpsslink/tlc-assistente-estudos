@@ -570,12 +570,12 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Renders `ConceptCard` when `mode = "concept"`, `ProjectCard` when `mode = "project"` (ESTD-01)
-- [ ] `markConceptRead` → UI updates within 100ms (RNTL `act()`) (ESTD-02)
-- [ ] Confirm dialog appears on `onNeedsConfirm()`; Confirm advances, Cancel keeps state (ESTD-21 to ESTD-24)
-- [ ] ConceptMaterial modal overlays the tab (ESTD-55)
-- [ ] Test file: `app/(tabs)/__tests__/index.test.tsx`
-- [ ] `npx tsc --noEmit` exits 0, `npm test -- --watchAll=false` exits 0, ≥ 10 tests pass
+- [x] Renders `ConceptCard` when `mode = "concept"`, `ProjectCard` when `mode = "project"` (ESTD-01)
+- [x] `markConceptRead` → UI updates within 100ms (RNTL `act()`) (ESTD-02)
+- [x] Confirm dialog appears on `onNeedsConfirm()`; Confirm advances, Cancel keeps state (ESTD-21 to ESTD-24)
+- [x] ConceptMaterial modal overlays the tab (ESTD-55)
+- [x] Test file: `app/(tabs)/__tests__/index.test.tsx`
+- [x] `npx tsc --noEmit` exits 0, `npm test -- --watchAll=false` exits 0, ≥ 10 tests pass
 
 **Tests**: unit
 **Gate**: build
