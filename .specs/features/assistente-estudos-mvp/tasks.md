@@ -336,13 +336,13 @@ T23 → T24
 - Skill: `anthropic-skills:claude-api` (for exact SSE event format and API error codes)
 
 **Done when**:
-- [ ] `streamMessage()` uses `response.body.getReader()` when available; falls back to `sendMessage()` when absent (design.md risk mitigation)
-- [ ] SSE parser handles `content_block_delta`, `message_stop`, ignores `event: ping`, buffers incomplete UTF-8 chunks
-- [ ] Maps HTTP 401 → `ChatError { code: 401 }`, 429, 500/502/503, network failure → "network" (ESTD-29 to ESTD-32)
-- [ ] Sends `{ model: "claude-sonnet-5-5", max_tokens: 4096, stream: true, system, messages }` (ESTD-35)
-- [ ] Never logs or exposes `apiKey` (ESTD-45)
-- [ ] Test file: `utils/__tests__/claudeApi.test.ts`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 12 tests pass
+- [x] `streamMessage()` uses `response.body.getReader()` when available; falls back to `sendMessage()` when absent (design.md risk mitigation)
+- [x] SSE parser handles `content_block_delta`, `message_stop`, ignores `event: ping`, buffers incomplete UTF-8 chunks
+- [x] Maps HTTP 401 → `ChatError { code: 401 }`, 429, 500/502/503, network failure → "network" (ESTD-29 to ESTD-32)
+- [x] Sends `{ model: "claude-sonnet-5-5", max_tokens: 4096, stream: true, system, messages }` (ESTD-35)
+- [x] Never logs or exposes `apiKey` (ESTD-45)
+- [x] Test file: `utils/__tests__/claudeApi.test.ts`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 12 tests pass
 
 **Tests**: unit
 **Gate**: quick
