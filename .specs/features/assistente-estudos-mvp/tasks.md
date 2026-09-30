@@ -698,12 +698,12 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] "Explique este conceito" → `setPendingChatInput("Me explique o conceito atual: [title]")` + `router.push("/(tabs)/chat")` (ESTD-36)
-- [ ] "Ajude no projeto" → sets input with project title + first uncompleted step title (ESTD-37)
-- [ ] "Próximos passos" → sets static "Quais são os próximos passos…" text (ESTD-38)
-- [ ] Not rendered when `apiKey` is null/empty (ESTD-40)
-- [ ] Test file: `components/Chat/__tests__/QuickActions.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 7 tests pass
+- [x] "Explique este conceito" → `setPendingChatInput("Me explique o conceito atual: [title]")` + `router.push("/(tabs)/chat")` (ESTD-36)
+- [x] "Ajude no projeto" → sets input with project title + first uncompleted step title (ESTD-37)
+- [x] "Próximos passos" → sets static "Quais são os próximos passos…" text (ESTD-38)
+- [x] Not rendered when `apiKey` is null/empty (ESTD-40)
+- [x] Test file: `components/Chat/__tests__/QuickActions.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 7 tests pass
 
 **Tests**: unit
 **Gate**: quick
