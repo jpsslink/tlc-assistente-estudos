@@ -363,13 +363,13 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] `sendMessage(text)` appends user message, calls `buildPrompt(studyState)` for system, truncates history to 20 before API call (ESTD-33)
-- [ ] Appends empty assistant message immediately; updates via `onChunk` (ESTD-27)
-- [ ] `isLoading = true` on send, `false` on done/error (ESTD-26)
-- [ ] Error sets `chatError`, does NOT clear `messages[]` (ESTD-29 to ESTD-32)
-- [ ] Chat history never written to MMKV (ESTD-48)
-- [ ] Test file: `hooks/__tests__/useClaudeChat.test.ts`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 15 tests pass
+- [x] `sendMessage(text)` appends user message, calls `buildPrompt(studyState)` for system, truncates history to 20 before API call (ESTD-33)
+- [x] Appends empty assistant message immediately; updates via `onChunk` (ESTD-27)
+- [x] `isLoading = true` on send, `false` on done/error (ESTD-26)
+- [x] Error sets `chatError`, does NOT clear `messages[]` (ESTD-29 to ESTD-32)
+- [x] Chat history never written to MMKV (ESTD-48)
+- [x] Test file: `hooks/__tests__/useClaudeChat.test.ts`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 15 tests pass
 
 **Tests**: unit
 **Gate**: quick
