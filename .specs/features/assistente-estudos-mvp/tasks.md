@@ -233,11 +233,11 @@ T23 → T24
 - Skill: `anthropic-skills:tlc-discover` (to retrieve existing curriculum content if available)
 
 **Done when**:
-- [ ] Exports `CURRICULUM: Phase[]` with exactly 7 phases covering 14 weeks
-- [ ] Phase 1 (`id: "phase-1"`) has exactly 2 projects (per spec assumption ESTD-20)
-- [ ] Each `Concept` has all 7 fields: `id`, `title`, `whyItMatters`, `whatToLearn`, `howToLearn`, `resources`, `pitfalls`, `readingTimeMinutes`
-- [ ] Each `Project` has all 5 fields: `id`, `title`, `description`, `steps`, `readinessCriteria`
-- [ ] `npx tsc --noEmit` exits 0
+- [x] Exports `CURRICULUM: Phase[]` with exactly 7 phases covering 14 weeks
+- [x] Phase 1 (`id: "phase-1"`) has exactly 2 projects (per spec assumption ESTD-20)
+- [x] Each `Concept` has all 7 fields: `id`, `title`, `whyItMatters`, `whatToLearn`, `howToLearn`, `resources`, `pitfalls`, `readingTimeMinutes`
+- [x] Each `Project` has all 5 fields: `id`, `title`, `description`, `steps`, `readinessCriteria`
+- [x] `npx tsc --noEmit` exits 0
 
 **Tests**: none
 **Gate**: build
