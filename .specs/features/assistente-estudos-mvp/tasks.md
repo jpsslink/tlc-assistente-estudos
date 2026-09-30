@@ -209,10 +209,10 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Exports: `Concept`, `Project`, `Phase` (curriculum types)
-- [ ] Exports: `StudyState`, `StudyStateActions` (state + actions)
-- [ ] Exports: `Message`, `ChatError` (chat types)
-- [ ] `npx tsc --noEmit` exits 0
+- [x] Exports: `Concept`, `Project`, `Phase` (curriculum types)
+- [x] Exports: `StudyState`, `StudyStateActions` (state + actions)
+- [x] Exports: `Message`, `ChatError` (chat types)
+- [x] `npx tsc --noEmit` exits 0
 
 **Tests**: none
 **Gate**: build
