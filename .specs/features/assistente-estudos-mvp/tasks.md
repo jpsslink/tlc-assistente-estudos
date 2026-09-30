@@ -544,12 +544,12 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Renders 14 week slots in 7 phase-colored segments via `ScrollView` + `Pressable` (ESTD-57)
-- [ ] Current week slot has distinct border/highlight (ESTD-58)
-- [ ] Completed phase segments render at 50% opacity (ESTD-59)
-- [ ] Long-press shows popover with phase name and project titles — uses `onLongPress`, no `hover:` (ESTD-60)
-- [ ] Test file: `components/Dashboard/__tests__/Timeline.test.tsx`
-- [ ] `npm test -- --watchAll=false` exits 0, ≥ 7 tests pass
+- [x] Renders 14 week slots in 7 phase-colored segments via `ScrollView` + `Pressable` (ESTD-57)
+- [x] Current week slot has distinct border/highlight (ESTD-58)
+- [x] Completed phase segments render at 50% opacity (ESTD-59)
+- [x] Long-press shows popover with phase name and project titles — uses `onLongPress`, no `hover:` (ESTD-60)
+- [x] Test file: `components/Dashboard/__tests__/Timeline.test.tsx`
+- [x] `npm test -- --watchAll=false` exits 0, ≥ 7 tests pass
 
 **Tests**: unit
 **Gate**: quick
