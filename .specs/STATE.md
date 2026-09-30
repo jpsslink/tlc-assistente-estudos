@@ -117,10 +117,10 @@
 ## Handoff
 
 - **Feature**: assistente-estudos-mvp
-- **Phase / Task**: Execute — pronto para iniciar (tasks aprovadas)
-- **Completed**: Spec (60 requisitos ESTD-01 a ESTD-60), Design (design.md), Tasks (tasks.md — 24 tasks, 8 fases, status Approved)
+- **Phase / Task**: ✅ FEATURE COMPLETA — todos os gaps fechados, validate_state.py exit 0.
+- **Completed**: 24 tasks + 2 fix tests (ESTD-47, ESTD-50). 186 testes passando, 0 falhas, 19 suites. Commits: c8bb252..8abb412 (16 commits).
 - **In-progress**: none
-- **Next step**: Execute — Batch 1 (T1–T8): setup Expo, NativeWind, Jest, types, curriculum, useStudyState, systemPrompt
-- **Blockers**: none — projeto ainda não tem git init; a primeira task (T1) cria o projeto Expo
-- **Uncommitted files**: .specs/features/assistente-estudos-mvp/design.md, .specs/features/assistente-estudos-mvp/tasks.md, .specs/STATE.md (nenhum código ainda)
-- **Branch**: main (sem git init ainda — T1 inicializa o projeto)
+- **Next step**: Pronto para ship. Próximo: EAS Build para gerar binários iOS/Android (AD-013), ou início de nova feature.
+- **Blockers**: none
+- **Uncommitted files**: .specs/STATE.md (este update)
+- **Branch**: main
