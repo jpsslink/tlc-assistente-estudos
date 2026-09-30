@@ -258,11 +258,11 @@ T23 → T24
 - Skill: none
 
 **Done when**:
-- [ ] Exports `MMKV_KEY = "ia-assistente-estudos-state-v1"` and `SECURE_KEY = "anthropic-api-key"` (ESTD-51)
-- [ ] Exports `readStudyState(): StudyState | null` — JSON-parses MMKV, returns null on missing or parse error with `console.warn` (ESTD-50)
-- [ ] Exports `writeStudyState(state: StudyState): void` — synchronous MMKV write
-- [ ] Exports `readApiKey(): Promise<string | null>` and `writeApiKey(key: string): Promise<void>` for SecureStore
-- [ ] `npx tsc --noEmit` exits 0
+- [x] Exports `MMKV_KEY = "ia-assistente-estudos-state-v1"` and `SECURE_KEY = "anthropic-api-key"` (ESTD-51)
+- [x] Exports `readStudyState(): StudyState | null` — JSON-parses MMKV, returns null on missing or parse error with `console.warn` (ESTD-50)
+- [x] Exports `writeStudyState(state: StudyState): void` — synchronous MMKV write
+- [x] Exports `readApiKey(): Promise<string | null>` and `writeApiKey(key: string): Promise<void>` for SecureStore
+- [x] `npx tsc --noEmit` exits 0
 
 **Tests**: none
 **Gate**: build
