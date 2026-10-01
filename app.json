@@ -7,9 +7,10 @@
     "icon": "./assets/images/icon.png",
     "scheme": "tlc-assistente-estudos",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.tlc-assistente-estudos"
     },
     "android": {
       "adaptiveIcon": {
